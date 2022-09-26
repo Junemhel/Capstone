@@ -1,0 +1,135 @@
+{% extends 'baseloggedin.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align: left; margin-left: 240px;">ROOM DATABASE</h2>
+<table id="room" class="sample">
+
+<thead>
+    <tr>
+        <th>USER ID</th>
+        <th>FIRSTNAME</th>
+        <th>LASTNAME</th>
+        <th>USERNAME</th>
+        <th>PHONE NUMBER</th>
+        <th>EMAIL</th>
+        <th>ACTIONS</th>
+    </tr>
+</thead>
+<tbody>              
+    {% for user in user %}                          
+    <tr>
+      <td>{{user.userID}}</td>
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.phone_number}}</td>
+      <td>{{user.email}}</td>
+        
+        <td>
+          <!-- Button trigger modal -->                                        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#userUpdatee-{{user.userID}}"><i class="bi bi-pencil"></i></button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#userDelete-{{user.userID}}"><i class="bi bi-trash"></i></button>
+        </td>
+    </tr>
+    <!-- Update Modal  IS FUCKING UP THE OTHER MODALS-->
+    <div class="modal fade" id="userUpdatee-{{user.userID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update User # {{user.userID}} </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form id="updateForm" method="post" >
+            {% csrf_token %}
+            <div class="modal-body">
+              <input type="hidden" name="userID" value = {{user.userID}}>
+
+              <div class = "row">
+                <div class =  "col-md-6">
+                    <label>Firstname</label>
+                </div>
+                <div class =  "col-md-6">
+                  <label>Lastname</label>
+                </div>
+              </div>
+              
+
+              <div class = "row">
+
+                <div class = "col-md-6">
+                  <input type="text" value="{{user.firstname}}" name="firstname">
+                </div>
+                <div class = "col-md-6">
+                  <input type="text" value="{{user.lastname}}" name="lastname">
+                </div>
+              </div>
+            
+<br>
+            
+            <div class = "row">
+              <div class =  "col-md-6">
+                  <label>Phone Number</label>
+              </div>
+              <div class =  "col-md-6">
+                <label>Email</label>
+              </div>
+            </div>
+              <div class = "row">
+
+                <div class = "col-md-6">
+                  <input type="text" value="{{user.phone_number}}" name="phone_number">
+                </div>
+                <div class = "col-md-6">
+                  <input type="text" value="{{user.email}}" name="email">
+                </div>
+              </div>
+          
+            </div>
+
+          
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" name = "userUpdate">Save changes</button>
+          </form>
+          </div>
+        </div>
+    </div>
+    </div>        
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="userDelete-{{user.userID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete User # {{user.userID}}?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form id="updateForm" method="post" >
+            {% csrf_token %}
+            <div class="modal-body">
+              <input type="hidden" name="userID" value = {{user.userID}}>
+              <center>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+                <button type="submit" class="btn btn-primary" name = "userDelete">YES</button>
+              </center>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+
+
+    {% endfor %}
+</tbody>
+</table>
+
+{% endblock content %}

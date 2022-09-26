@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+  
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>About</h2>
+          <ol>
+            <li><a href="{% url 'App:home_view' %}">Home</a></li>
+            <li>About</li>
+          </ol>
+        </div>
+  
+      </div>
+    </section><!-- End Breadcrumbs -->
+  
+
+  
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container">
+  
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our <strong>Team</strong></h2>
+        </div>
+  
+        <div class="row">
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <div class="member-img">
+                    
+                    <img src="{% static 'assets/img/custom/Francos Motion.gif' %}" class="img-fluid" alt="">
+
+
+              </div>
+              <div class="member-info">
+                <h4>Francos Batino</h4>
+                <span>Backend Developer</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{% static 'assets/img/custom/Ronald Motion.gif' %}" class="img-fluid" alt="">
+
+
+              </div>
+              <div class="member-info">
+                <h4>Ronald Pocong</h4>
+                <span>Frontend Developer</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{% static 'assets/img/custom/Junemhel Motion.gif' %}" class="img-fluid" alt="">
+
+
+              </div>
+              <div class="member-info">
+                <h4>Junemhel Rabadon</h4>
+                <span>Project Manager</span>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-8 d-flex align-items-stretch">
+          </div>
+
+          <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{% static 'assets/img/custom/Herah Motion.gif' %}" class="img-fluid" alt="">
+
+
+              </div>
+              <div class="member-info">
+                <h4>Herah Fatima Labiaga</h4>
+                <span>Documentation Lead</span>
+              </div>
+            </div>
+          </div>  
+
+          <div class="col-lg-4 col-md-8 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{% static 'assets/img/custom/Vir Motion.gif' %}" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Vir Nichael Cabahug</h4>
+                <span>Frontend Developer</span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+  
+      </div>
+    </section>
+    <!-- End Our Team Section -->
+    <!-- ======= About Us Section ======= -->
+
+    <!-- End About Us Section -->  
+    <!-- ======= Our Skills Section ======= -->
+    <!-- <section id="skills" class="skills">
+      <div class="container">
+  
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our <strong>Rooms</strong></h2>
+          <p>Our rooms have been rated by each and every customer and we've compiled them into this summary</p>
+        </div>
+  
+        <div class="row skills-content">
+  
+          <div class="col-lg-6" data-aos="fade-up">
+  
+            <div class="progress">
+              <span class="skill">Cleanliness <i class="val">99.9%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="99.9" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">Customer Satisfaction <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">Utilities <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+  
+            <div class="progress">
+              <span class="skill">Efficiency<i class="val">96%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">Friendly Staff  <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <span class="skill">Convinience <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+    </section> -->
+    <!-- End Our Skills Section -->
+  
+  
+  </main><!-- End #main -->
+{% endblock content %}

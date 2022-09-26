@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Login</h2>
+        <ol>
+          <li><a href="{% url 'App:home_view' %}">Home</a></li>
+          <li>Login</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Breadcrumbs -->
+<section class="contact">
+	<div class="container">
+	  <div class="row mt-5 justify-content-center" data-aos="fade-up">
+		<div class="col-lg-10">
+
+		  <form method="POST" action="" class="php-email-form">
+
+
+
+            <div style="color:black">
+			  <h1><span class="d-flex justify-content-center links">Login</span></h1>
+			  {% csrf_token %}
+			  {% load crispy_forms_tags %}
+			  {{ form|crispy }}
+			</div>
+			  <br>
+			  <div class="contact">
+			  <input class="btn btn-primary text-light" style="width: 100%;" type="submit" value="Sign Up">
+			  </div> 
+
+			  	<div class="d-flex justify-content-center links" style="color: black;"> 
+				<br>
+				Don't have an account? 
+				<a href="" class="ml-2">
+					<br>
+					&nbsp;&nbsp;Sign Up
+				</a>
+				</div>
+
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+{% endblock content %}

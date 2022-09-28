@@ -11,7 +11,7 @@ class Classroom(models.Model):
     teacher = models.CharField(max_length= 100)
     student = models.CharField(max_length= 100)
 
-    objects = models.Manager()
+
 
 class Quiz(models.Model):
     quiID = models.AutoField(primary_key=True)
@@ -24,7 +24,7 @@ class Quiz(models.Model):
     answerThree = models.CharField(max_length= 300, blank=True)
     answerFour = models.CharField(max_length= 300, blank=True)
 
-    objects = models.Manager()
+
 
 class User(AbstractUser):
     userID = models.AutoField(primary_key=True)

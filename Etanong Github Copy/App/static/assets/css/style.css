@@ -1928,7 +1928,7 @@ section {
 /*--------------------------------------------------------------
 # Log in Curves
 --------------------------------------------------------------*/
-@media screen and (max-width: 320px) { 
+
 section .wave:after
 {
 	position: absolute;
@@ -1988,10 +1988,7 @@ section .wave
 		background-position: 0;
 	}
 }
-}
-@media screen and (max-width: 800px) { 
 
-}
 
 /* .custom-shape-divider-bottom-1664329017 {
   position: absolute;

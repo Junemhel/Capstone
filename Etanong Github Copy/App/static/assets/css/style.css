@@ -1929,7 +1929,7 @@ section {
 # Log in Curves
 --------------------------------------------------------------*/
 
-section .wave:after
+section .wave:
 {
 	position: absolute;
 	width: 100%;
@@ -1953,7 +1953,7 @@ section .wave:before
 	animation: animate-reverse 10s linear infinite;
 }
 
-section .wave
+section .wave::after
 {
 	content: '';
 	width: 100%;

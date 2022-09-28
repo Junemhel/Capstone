@@ -48,11 +48,13 @@ class createQuizView(View):
         
 class userView(View):
     def get(self, request):
-        user = User.objects.all(),
-
-
+        user = User.objects.all()
+        quiz = Quiz.objects.all()
+        classroom = Classroom.objects.all()
         context = {
             'user' : user,
+            'quiz' : quiz,
+            'classroom' : classroom
         }
         return render(request, 'user.html', context)
     

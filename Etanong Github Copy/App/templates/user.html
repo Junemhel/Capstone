@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'baseloggedin.html' %}
 {% load static %}
 {% block content %}
 <br>
@@ -36,7 +36,7 @@
           <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#userDelete-{{user.userID}}"><i class="bi bi-trash"></i></button>
         </td>
     </tr>
-
+    <!-- Update Modal  IS FUCKING UP THE OTHER MODALS-->
     <div class="modal fade" id="userUpdatee-{{user.userID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -131,6 +131,5 @@
     {% endfor %}
 </tbody>
 </table>
-
 
 {% endblock content %}

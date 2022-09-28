@@ -12,7 +12,13 @@ urlpatterns = [
     path('register', views.registerView.as_view(), name="register_view"),   
     path('createQuiz', views.createQuizView.as_view(), name="createQuiz_view"),  
     path('user', views.userView.as_view(), name="user_view"),
+<<<<<<< HEAD
     path('choosetypeofquestion', views.choosetypeofquestionView.as_view(), name="choosetypeofquestion_view"),
      
 
+=======
+
+    
+    path('trueorfalse', views.trueorfalseView.as_view(), name="trueorfalse_view"),
+>>>>>>> bdf8d9691defcb20ba4e80cc4ed01d06b79b9cf8
 ]

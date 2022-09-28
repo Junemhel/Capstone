@@ -25,9 +25,9 @@ class loginView(View):
     def get(self, request):
         return render(request, 'login.html',{})
 
-class trueorfalseView(View):
+class choosetypeofquestionView(View):
     def get(self, request):
-        return render(request, 'trueorfalse.html',{})
+        return render(request, 'choosetypeofquestion.html',{})
 
 class registerView(View):
     def get(self, request):

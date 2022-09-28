@@ -1760,6 +1760,92 @@ section {
   font-size: 14px;
 }
 
+
+/*--------------------------------------------------------------
+# Log in Curves
+--------------------------------------------------------------*/
+
+section .wave
+{
+	position: absolute;
+	width: 100%;
+	height: 143px;
+	bottom: 0;
+  left: 0;
+  background: url("/static/assets/img/wave/bar.png");
+	animation: animate 10s linear infinite;
+}
+
+section .wave:before
+{
+	content: '';
+	width: 100%;
+	height: 143px;
+	background: url("/static/assets/img/wave/wave.png");
+  position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.4;
+	animation: animate-reverse 10s linear infinite;
+}
+
+section .wave:after
+{
+	content: '';
+	width: 100%;
+	height: 143px;
+	background: url("/static/assets/img/wave/wave.png");
+  position: absolute;
+	top: 0;
+	left: 0;
+	animation: animate 15s linear infinite;
+}
+
+@keyframes animate
+{
+	0%
+	{
+	  background-position: 0;
+	}
+	100%
+	{
+		background-position: 1360px;
+	}
+}
+
+@keyframes animate-reverse
+{
+	0%
+	{
+		background-position: 1360px;
+	}
+	100%
+	{
+		background-position: 0;
+	}
+}
+
+/* .custom-shape-divider-bottom-1664329017 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1664329017 svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 258px;
+}
+
+.custom-shape-divider-bottom-1664329017 .shape-fill {
+  fill: #88303F;
+} */
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

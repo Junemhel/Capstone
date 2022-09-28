@@ -25,6 +25,10 @@ class loginView(View):
     def get(self, request):
         return render(request, 'login.html',{})
 
+class trueorfalseView(View):
+    def get(self, request):
+        return render(request, 'trueorfalse.html',{})
+
 class registerView(View):
     def get(self, request):
         form = UserForm()

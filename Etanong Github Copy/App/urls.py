@@ -11,5 +11,7 @@ urlpatterns = [
     path('login', auth_view.LoginView.as_view(template_name='login.html'),name="login_view"),
     path('register', views.registerView.as_view(), name="register_view"),   
     path('createQuiz', views.createQuizView.as_view(), name="createQuiz_view"),  
-    path('user', views.userView.as_view(), name="user_view"),   
+    path('user', views.userView.as_view(), name="user_view"),
+    path('trueorfalse', views.trueorfalseView.as_view(), name="trueorfalse_view"),
+     
 ]

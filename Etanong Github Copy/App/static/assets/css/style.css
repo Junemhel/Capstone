@@ -8,100 +8,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-#outerBox {
-  width: 1400px;
-  height: 450px;
-  background-color: #6D2632;
-  border-radius: 40px;
-  border-style: solid;
-  border-color: #BA861F;
-  border-width: 	10px;
-  margin-top: 20px;
-  margin-left: 220px;
-  margin-bottom: 25px;
-}
 
-#innerBox2 {
-  width: auto;
-  height: auto;
-  background-color: white;
-  margin-top: 20px;
-  border-style: solid;
-  border-radius: 40px;
-  border-color: white;
-  padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-#innerBox1 {
-  width: auto;
-  height: auto;
-  background-color: white;
-  margin-top: 70px;
-  border-style: solid;
-  border-radius: 40px;
-  border-color: white;
-  padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  text-decoration: none;
-  display: block;
-}
-#innerBox1, #innerBox2, h3{
-background-color: white;
-font-size: 25px;
-color: gray;
-text-align: center;
-}
-
-.blue{
-background-color: #44488A;
-border-style: none;
-border-radius: 40px;
-width: 180px;
-height: 40px;
-color: white;
-}
-
-
-.yellow{
-background-color: #BA861F;
-border-style: none;
-border-radius: 40px;
-width: 180px;
-height: 40px;
-color: white;
-}
-
-.green{
-background-color: #7F9D34;
-border-style: none;
-border-radius: 40px;
-width: 180px;
-height: 40px;
-color: white;
-}
-
-.red{
-background-color: #BF4037;
-border-style: none;
-border-radius: 40px;
-width: 180px;
-height: 40px;
-color: white;
-}
-
-#textBox{
-background-color: #BA861F;
-width: 	260px;
-height: 45px;
-font-size: 	25px;
-text-align: center;	
-border-radius: 40px;
-color: 	#3E262A;
-margin-left: 240px;
-margin-top: 40px;
-}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -2032,9 +1939,104 @@ section {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
+
 /* Vir */
-=======
+#outerBox {
+  width: 1400px;
+  height: 450px;
+  background-color: #6D2632;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #BA861F;
+  border-width: 	10px;
+  margin-top: 20px;
+  margin-left: 220px;
+  margin-bottom: 25px;
+}
+
+#innerBox2 {
+  width: auto;
+  height: auto;
+  background-color: white;
+  margin-top: 20px;
+  border-style: solid;
+  border-radius: 40px;
+  border-color: white;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: block;
+}
+#innerBox1 {
+  width: auto;
+  height: auto;
+  background-color: white;
+  margin-top: 70px;
+  border-style: solid;
+  border-radius: 40px;
+  border-color: white;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  display: block;
+}
+#innerBox1, #innerBox2, h3{
+background-color: white;
+font-size: 25px;
+color: gray;
+text-align: center;
+}
+
+.blue{
+background-color: #44488A;
+border-style: none;
+border-radius: 40px;
+width: 180px;
+height: 40px;
+color: white;
+}
+
+
+.yellow{
+background-color: #BA861F;
+border-style: none;
+border-radius: 40px;
+width: 180px;
+height: 40px;
+color: white;
+}
+
+.green{
+background-color: #7F9D34;
+border-style: none;
+border-radius: 40px;
+width: 180px;
+height: 40px;
+color: white;
+}
+
+.red{
+background-color: #BF4037;
+border-style: none;
+border-radius: 40px;
+width: 180px;
+height: 40px;
+color: white;
+}
+
+#textBox{
+background-color: #BA861F;
+width: 	260px;
+height: 45px;
+font-size: 	25px;
+text-align: center;	
+border-radius: 40px;
+color: 	#3E262A;
+margin-left: 240px;
+margin-top: 40px;
+}
+
 .dropbtn:hover, .dropbtn:focus {
   background-color: #f7c007;
 }

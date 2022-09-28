@@ -11,15 +11,20 @@ class Classroom(models.Model):
     teacher = models.CharField(max_length= 100)
     student = models.CharField(max_length= 100)
 
+    objects = models.Manager()
+
 class Quiz(models.Model):
     quiID = models.AutoField(primary_key=True)
     question = models.CharField(max_length= 2000)
+    quiztype = models.CharField(max_length= 100)
     subject = models.CharField(max_length= 2000)
     teacherID = models.CharField(max_length= 100)
-    answerOne = models.CharField(max_length= 100)
-    answerTwo = models.CharField(max_length= 100)
-    answerThree = models.CharField(max_length= 100)
-    answerFour = models.CharField(max_length= 100)
+    answerOne = models.CharField(max_length= 300)
+    answerTwo = models.CharField(max_length= 300)
+    answerThree = models.CharField(max_length= 300, blank=True)
+    answerFour = models.CharField(max_length= 300, blank=True)
+
+    objects = models.Manager()
 
 class User(AbstractUser):
     userID = models.AutoField(primary_key=True)

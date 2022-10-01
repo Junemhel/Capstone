@@ -25,6 +25,10 @@ class loginView(View):
     def get(self, request):
         return render(request, 'login.html',{})
 
+class createquiz2View(View):
+    def get(self, request):
+        return render(request, 'createquiz2.html',{})        
+
 class choosetypeofquestionView(View):
     def get(self, request):
         return render(request, 'choosetypeofquestion.html',{})

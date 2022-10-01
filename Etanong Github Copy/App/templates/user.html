@@ -132,4 +132,310 @@
 </tbody>
 </table>
 
+<h2 style="text-align: left; margin-left: 240px;">CLASSROOM DATABASE</h2>
+<table id="room" class="sample">
+
+<thead>
+    <tr>
+        <th>ROOM ID</th>
+        <th>CODE</th>
+        <th>STATUS</th>
+        <th>TEACHER</th>
+        <th>STUDENT</th>
+        <th>ACTIONS</th>
+    </tr>
+</thead>
+<tbody>              
+    {% for classroom in classroom %}                          
+    <tr>
+      <td>{{classroom.roomID}}</td>
+      <td>{{classroom.code}}</td>
+      <td>{{classroom.status}}</td>
+      <td>{{classroom.teacher}}</td>
+      <td>{{classroom.student}}</td>
+        
+        <td>
+          <!-- Button trigger modal -->                                        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#classroomUpdatee-{{classroom.roomID}}"><i class="bi bi-pencil"></i></button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#classroomDelete-{{classroom.roomID}}"><i class="bi bi-trash"></i></button>
+        </td>
+    </tr>
+    <!-- Update Modal  IS FUCKING UP THE OTHER MODALS-->
+    <div class="modal fade" id="classroomUpdatee-{{classroom.roomID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Classroom # {{classroom.roomID}} </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form id="updateForm" method="post" >
+            {% csrf_token %}
+            <div class="modal-body">
+              <input type="hidden" name="roomID" value = {{classroom.roomID}}>
+
+              <div class = "row">
+                <div class =  "col-md-6">
+                    <label>Status</label>
+                </div>
+                <div class =  "col-md-6">
+                  <label>Teacher</label>
+                </div>
+              </div>
+              
+
+              <div class = "row">
+
+                <div class = "col-md-6">
+                  <select name="status">
+                    <option value="{{classroom.status}}">{{classroom.status}}</option>
+                    <option value="EMPTY">EMPTY</option>
+                    <option value="OPEN">OPEN</option>
+                    <option value="CLOSED">CLOSED</option>
+                  </select>
+                </div>
+                <div class = "col-md-6">
+                  <input type="text" value="{{classroom.teacher}}" name="teacher">
+                </div>
+              </div>
+            
+<br>
+            
+            <div class = "row">
+              <div class =  "col-md-2">
+                  <label>Student</label>
+              </div>
+            </div>
+              <div class = "row">
+
+                <div class = "col-md-2">
+                    <select name="student">
+                      <option value="{{classroom.student}}">{{classroom.student}}</option>
+                      {% for user in user %}
+                        <option value="{{user.username}}">{{user.username}}</option>
+                      {% endfor %}
+                    </select>
+                  
+                </div>
+              </div>
+          
+            </div>
+
+          
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" name = "classroomUpdate">Save changes</button>
+          </form>
+          </div>
+        </div>
+    </div>
+    </div>        
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="classroomDelete-{{classroom.roomID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Classroom # {{classroom.roomID}}?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form id="updateForm" method="post" >
+            {% csrf_token %}
+            <div class="modal-body">
+              <input type="hidden" name="roomID" value = {{classroom.roomID}}>
+              <center>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+                <button type="submit" class="btn btn-primary" name = "classroomDelete">YES</button>
+              </center>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+
+
+    {% endfor %}
+</tbody>
+</table>
+
+<h2 style="text-align: left; margin-left: 240px;">QUIZ DATABASE</h2>
+<table id="room" class="sample">
+
+<thead>
+    <tr>
+        <th>QUIZ ID</th>
+        <th>QUESTION</th>
+        <th>QUIZ TYPE</th>
+        <th>SUBJECT</th>
+        <th>TEACHER ID</th>
+        <th>ANSWER ONE</th>
+        <th>ANSWER TWO</th>
+        <th>ANSWER THREE</th>
+        <th>ANSWER FOUR</th>
+        <th>ACTIONS</th>
+    </tr>
+</thead>
+<tbody>              
+    {% for quiz in quiz %}                          
+    <tr>
+      <td>{{quiz.quiID}}</td>
+      <td>{{quiz.question}}</td>
+      <td>{{quiz.quiztype}}</td>
+      <td>{{quiz.subject}}</td>
+      <td>{{quiz.teacherID}}</td>
+      <td>{{quiz.answerOne}}</td>
+      <td>{{quiz.answerTwo}}</td>
+      <td>{{quiz.answerThree}}</td>
+      <td>{{quiz.answerFour}}</td>
+        
+        <td>
+          <!-- Button trigger modal -->                                        
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quizUpdate-{{quiz.quiID}}"><i class="bi bi-pencil"></i></button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#quizDelete-{{quiz.quiID}}"><i class="bi bi-trash"></i></button>
+        </td>
+    </tr>
+    <!-- Update Modal  IS FUCKING UP THE OTHER MODALS-->
+    <div class="modal fade" id="quizUpdate-{{quiz.quiID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Update Quiz # {{quiz.quiID}} </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form id="updateForm" method="post" >
+            {% csrf_token %}
+            <div class="modal-body">
+              <input type="hidden" name="quiID" value = {{quiz.quiID}}>
+
+              <div class = "row">
+                <div class =  "col-md-6">
+                    <label>Question</label>
+                </div>
+                <div class =  "col-md-6">
+                  <label>Quiz Type</label>
+                </div>
+              </div>
+              
+
+              <div class = "row">
+
+                <div class = "col-md-6">
+                  <input type="text" value="{{quiz.question}}" name="question">
+                </div>
+                <div class = "col-md-6">
+                  <select name="quiztype">
+                    <option value="{{quiz.quiztype}}">{{quiz.quiztype}}</option>
+                    <option value="TRUE OR FALSE">TRUE OR FALSE</option>
+                    <option value="MULTIPLE CHOICE">MULTIPLE CHOICE</option>
+                  </select>                  
+                </div>
+              </div>
+            
+<br>
+            
+            <div class = "row">
+              <div class =  "col-md-6">
+                  <label>Subject</label>
+              </div>
+              <div class =  "col-md-6">
+                <label>Teacher ID</label>
+              </div>
+            </div>
+              <div class = "row">
+
+                <div class = "col-md-6">
+                  <select name="subject">
+                    {% endfor %}
+                    {% for quiz in quiz %}
+                    <option value="{{quiz.subject}}">{{quiz.subject}}</option>
+                  </select> 
+                </div>
+                <div class = "col-md-6">
+                  <input type="text" value="{{quiz.teacherID}}" name="teacherID">
+                </div>
+              </div>
+<br>
+              <div class = "row">
+                <div class =  "col-md-6">
+                    <label>Answer One</label>
+                </div>
+                <div class =  "col-md-6">
+                  <label>Answer Two</label>
+                </div>
+              </div>
+             
+  
+              <div class = "row">
+  
+                <div class = "col-md-6">
+                  <input type="text" value="{{quiz.answerOne}}" name="answerOne">
+                </div>
+  
+                <div class = "col-md-6">
+                  <input type="text" value="{{quiz.answerTwo}}" name="answerTwo">
+                </div>
+              </div>
+  
+              <div class = "row">
+                <div class =  "col-md-6">
+                    <label>Answer Three</label>
+                </div>
+                <div class =  "col-md-6">
+                  <label>Answer Four</label>
+                </div>
+              </div>
+  
+              <div class = "row">
+  
+                <div class = "col-md-6">
+                  <input type="text" value="{{quiz.answerThree}}" name="answerThree">
+                </div>
+  
+                <div class = "col-md-6">
+                  <input type="text" value="{{quiz.answerFour}}" name="answerFour">
+                </div>
+              </div>              
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" name = "quizUpdate">Save changes</button>
+          </form>
+          </div>
+        </div>
+    </div>
+    </div>        
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="quizDelete-{{quiz.quiID}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete Quiz # {{quiz.quiID}}?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form id="updateForm" method="post" >
+            {% csrf_token %}
+            <div class="modal-body">
+              <input type="hidden" name="quiID" value = {{quiz.quiID}}>
+              <center>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+                <button type="submit" class="btn btn-primary" name = "quizDelete">YES</button>
+              </center>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+
+
+
+    {% endfor %}
+</tbody>
+</table>
 {% endblock content %}

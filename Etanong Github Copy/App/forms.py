@@ -3,12 +3,12 @@ from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 
-class Classroom(forms.ModelForm):
+class ClassroomForm(forms.ModelForm):
 	class Meta:
 		model = Classroom
 		fields= '__all__'
 
-class Quiz(forms.ModelForm):
+class QuizForm(forms.ModelForm):
 	class Meta:
 		model = Quiz
 		fields= '__all__'

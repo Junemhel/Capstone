@@ -1,7 +1,41 @@
-{% extends 'baseloggedin.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
 
 
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
 
-{% endblock content %}
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>HOME/CREATE QUIZ</h2>
+        
+      </div>
+
+    </div>
+  </section>
+  
+  <div id="textBox">ENTER QUIZ NAME</div>
+  <div id="outerBox">
+      <a href="#"id="innerBox1">
+          <h3>Question</h3>
+          <button class="blue">A</button>
+          <button class="yellow">B</button>
+          <button class="green">C</button>
+          <button class="red">D</button>
+      </a>
+      <a href="#" id="innerBox2">
+          <h3>Question</h3>
+          <button class="green">TRUE</button>
+          <button class="red">FALSE</button>
+      </a>
+  </div>
+</div>
+
+
+<style> 
+
+</style>
+    {% endblock content %}
+
+   
+

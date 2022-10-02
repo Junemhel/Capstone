@@ -2093,6 +2093,89 @@ margin-top: 40px;
 
 }
 
+/*vir3*/
+#outerBoxtf {
+  width: 1200px;
+  height: 250px;
+  background-color: #6D2632;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #BA861F;
+  border-width: 	0px;
+  margin-top: 20px;
+  margin-left: 370px;
+  padding-bottom: 20px;
+  margin-bottom:  10px;
+}
+#innerBoxtf1 {
+  width: 400px;
+  height: 200px;
+  background-color: #a8cc44;
+  margin-top: 20px;
+  border-style: none;
+  border-radius: 100px;
+  border-color: rgb(255, 255, 255);
+  padding: 30px;
+  margin-left: 500px;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 123px;
+  padding-top: 12;
+}
+
+#innerBoxtf2 {
+  width: 400px;
+  height: 200px;
+  background-color: #f85444;
+  margin-top: 20px;
+  border-style: none;
+  border-radius: 100px;
+  border-color: white;
+  padding: 30px;
+  margin-left: 100px;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 123px;
+  padding-top: 12;
+}
+
+#innerBoxtf12 {
+  display: flex;
+} 
+
+
+#texttf {
+color: gold;
+text-align:center;
+padding-top: 20px;
+padding-left: 10px;
+
+
+}
+
+.innerboxtffont {
+  color: #383a3c;
+  text-align:center;
+  font-size: 40px;
+  padding-top: 20px;
+  padding-left: 10px;
+  
+  
+  }
+
+#textBoxtf{
+  background-color: #BA861F;
+  width: 	260px;
+  height: 45px;
+  font-size: 	25px;
+  text-align: center;	
+  border-radius: 40px;
+  color: 	#3E262A;
+  margin-left: 460px;
+  margin-top: 40px;
+
+}
+
 
 .dropbtn:hover, .dropbtn:focus {
   background-color: #f7c007;

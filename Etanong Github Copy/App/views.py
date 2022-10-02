@@ -25,9 +25,13 @@ class loginView(View):
     def get(self, request):
         return render(request, 'login.html',{})
 
-class trueorfalseView(View):
+class createquiz2View(View):
     def get(self, request):
-        return render(request, 'trueorfalse.html',{})
+        return render(request, 'createquiz2.html',{})        
+
+class choosetypeofquestionView(View):
+    def get(self, request):
+        return render(request, 'choosetypeofquestion.html',{})
 
 class registerView(View):
     def get(self, request):
@@ -49,9 +53,12 @@ class createQuizView(View):
 class userView(View):
     def get(self, request):
         user = User.objects.all()
-
+        quiz = Quiz.objects.all()
+        classroom = Classroom.objects.all()
         context = {
             'user' : user,
+            'quiz' : quiz,
+            'classroom' : classroom
         }
         return render(request, 'user.html', context)
     
@@ -68,4 +75,29 @@ class userView(View):
                 phone_number = request.POST.get("phone_number")
                 email = request.POST.get("email")
                 agentUpdate = User.objects.filter(userID = userID).update(firstname = firstname, lastname = lastname, phone_number = phone_number, email = email)
+            elif 'classroomDelete' in request.POST:
+                roomID = request.POST.get("roomID")
+                roomDelete = Classroom.objects.filter(roomID = roomID).delete()
+                print('recorded deleted')
+            elif 'classroomUpdate' in request.POST: 
+                roomID = request.POST.get("roomID")
+                status = request.POST.get("status")
+                teacher = request.POST.get("teacher") 
+                student = request.POST.get("student")
+                classroomUpdate = Classroom.objects.filter(roomID = roomID).update(status = status, teacher = teacher, student = student)
+            elif 'quizDelete' in request.POST:
+                quiID = request.POST.get("quiID")
+                quizDelete = Quiz.objects.filter(quiID = quiID).delete()
+                print('recorded deleted')   
+            elif 'quizUpdate' in request.POST: 
+                quiID = request.POST.get("quiID")
+                question = request.POST.get("question")
+                quiztype = request.POST.get("quiztype") 
+                subject = request.POST.get("subject")
+                teacherID = request.POST.get("teacherID")
+                answerOne = request.POST.get("answerOne")
+                answerTwo = request.POST.get("answerTwo")
+                answerThree = request.POST.get("answerThree")
+                answerFour = request.POST.get("answerFour")
+                quizUpdate = Quiz.objects.filter(quiID = quiID).update(question = question, quiztype = quiztype, subject = subject, teacherID = teacherID, answerOne = answerOne, answerTwo = answerTwo, answerThree = answerThree, answerFour = answerFour)         
         return redirect('App:user_view')     

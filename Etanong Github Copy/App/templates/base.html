@@ -55,6 +55,7 @@
           <li><a href="{% url 'App:about_view' %}" >About</a></li>
           <li><a href="{% url 'App:contact_view' %}" >Contact</a></li>
           <li><a href="{% url 'App:login_view' %}" >Login</a></li>
+          <li><a href="{% url 'App:user_view' %}" >Tables(Temp)</a></li>
           <!-- <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="{% url 'App:about_view' %}">About Us</a></li>
@@ -89,7 +90,18 @@
         <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
       </div>
 
+      <div class="dropdown">
+       
+        <button onclick="myFunction()" class="dropbtn">CLICK HERE!</button>
+      
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Dashboard</a>
+          <a href="#about">Create Quiz</a>
+        </div>
+      </div>
+
     </div>
+
   </header><!-- End Header -->
 
   {% block content %}
@@ -165,6 +177,30 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
+
+<!-- JS for drop down -->
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+   
 
 </body>
 

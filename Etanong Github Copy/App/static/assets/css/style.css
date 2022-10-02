@@ -1981,11 +1981,18 @@ section {
   text-decoration: none;
   display: block;
 }
-#innerBox1, #innerBox2, h3{
+#innerBox1, #innerBox2{
 background-color: none;
 font-size: 25px;
-color: gray;
+color: white;
 text-align: center;
+}
+
+.createQ{
+  background-color: none;
+  font-size: 25px;
+  color: rgb(58, 58, 58);
+  text-align: center;
 }
 
 .blue{
@@ -2059,6 +2066,7 @@ margin-top: 40px;
   border-style: none;
   border-radius: 20px;
   border-color: white;
+  color: black !important;
   padding: 30px;
   margin-left: 110px;
   margin-right: 20px;

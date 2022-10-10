@@ -27,7 +27,15 @@ class loginView(View):
 
 class createquizView(View):
     def get(self, request):
-        return render(request, 'createquiz.html',{})               
+        return render(request, 'createquiz.html',{})
+
+class createClassAdminView(View):
+    def get(self, request):
+        return render(request, 'createclassadmin.html',{})      
+class createClassTeacherView(View):
+    def get(self, request):
+        return render(request, 'createclassteacher.html',{})                                 
+             
 
 class createquiz2View(View):
     def get(self, request):

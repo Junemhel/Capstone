@@ -1944,10 +1944,10 @@ section {
 #outerBox {
   width: 1400px;
   height: 450px;
-  background-color: #6D2632;
+  background-color: #88303f;
   border-radius: 40px;
   border-style: solid;
-  border-color: #BA861F;
+  border-color:#f7c007;
   border-width: 	10px;
   margin-top: 20px;
   margin-left: 220px;
@@ -2024,7 +2024,7 @@ color: white;
 }
 
 .red{
-background-color: #BF4037;
+background-color: #88303f;
 border-style: none;
 border-radius: 40px;
 width: 180px;
@@ -2033,7 +2033,7 @@ color: white;
 }
 
 #textBox{
-background-color: #BA861F;
+background-color: #f7c007;
 width: 	260px;
 height: 45px;
 font-size: 	25px;
@@ -2048,10 +2048,10 @@ margin-top: 40px;
 #outerBoxQ2 {
   width: 1000px;
   height: 520px;
-  background-color: #6D2632;
+  background-color: #88303f;
   border-radius: 50px;
   border-style: solid;
-  border-color: #BA861F;
+  border-color: #f7c007;
   border-width: 	10px;
   margin-top: 20px;
   margin-left: 450px;
@@ -2089,7 +2089,7 @@ margin-top: 40px;
   background-size: cover;
 }
 #textBoxQ2{
-  background-color: #BA861F;
+  background-color: #f7c007;
   width: 	260px;
   height: 45px;
   font-size: 	25px;
@@ -2105,10 +2105,10 @@ margin-top: 40px;
 #outerBoxtf {
   width: 1200px;
   height: 250px;
-  background-color: #6D2632;
+  background-color:#88303f;
   border-radius: 50px;
   border-style: solid;
-  border-color: #BA861F;
+  border-color: #f7c007;
   border-width: 	0px;
   margin-top: 20px;
   margin-left: 370px;
@@ -2183,6 +2183,98 @@ padding-left: 10px;
   margin-top: 40px;
 
 }
+
+/*vir4createClass*/
+
+#textBoxcn{
+  background-color: #f7c007;
+  width: 	260px;
+  height: 45px;
+  font-size: 	25px;
+  text-align: center;	
+  border-radius: 40px;
+  color: 	#3E262A;
+  margin-left: 400px;
+  margin-top: 40px;
+  }
+
+#inputLine{
+display: block;
+text-align: center;
+margin-top: 80px;
+border: none;
+outline: none;
+
+
+}
+
+#buttoncn{
+  text-align: center;
+  margin-top: 70px;
+
+}
+
+.btncn{
+  background-color: #f7c007;
+  border-style: none;
+  border-radius: 40px;
+  width: 180px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+ margin-right: 60px;
+ margin-left: 20px;
+  }
+
+.inputcn{
+    
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    text-align: center;
+    width: 900px;
+    align-content: center;
+border-color: #c7acaf;
+   
+  
+}
+  
+#innerBox1cn {
+  width: auto;
+  height: 150px;
+  background-color: white;
+  margin-top: 50px;
+  border-style: solid;
+  border-radius: 40px;
+  border-color: white;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  display: block;
+}
+#outerBoxcn {
+  width: 1100px;
+  height: 450px;
+  background-color:#88303f;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #f7c007;
+  border-width: 	10px;
+  margin-top: 20px;
+  margin-left: 370px;
+  margin-bottom: 25px;
+
+}
+
+input::placeholder {
+  color: #c7acaf;
+  font-size: 1.4em;
+  font-family: "Roboto", sans-serif;
+}
+
 
 
 .dropbtn:hover, .dropbtn:focus {

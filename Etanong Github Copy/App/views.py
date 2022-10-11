@@ -34,7 +34,15 @@ class createClassAdminView(View):
         return render(request, 'createclassadmin.html',{})      
 class createClassTeacherView(View):
     def get(self, request):
-        return render(request, 'createclassteacher.html',{})                                 
+        return render(request, 'createclassteacher.html',{})    
+
+class autoGenerateView(View):
+    def get(self, request):
+        return render(request, 'autogenerate.html',{})
+
+class reviewPageView(View):
+    def get(self, request):
+        return render(request, 'reviewpage.html',{})                                              
              
 
 class createquiz2View(View):

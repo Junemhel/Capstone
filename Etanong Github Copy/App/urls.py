@@ -15,7 +15,8 @@ urlpatterns = [
      path('createclassteacher', views.createClassTeacherView.as_view(), name="createClassTeacher_view"), 
     path('createquiz2', views.createquiz2View.as_view(), name="createquiz2_view"),  
     path('trueorfalsequestion', views.trueorfalsequestionView.as_view(), name="trueorfalsequestion_view"),
-
+    path('autogenerate', views.autoGenerateView.as_view(), name="autogenerate_view"),  
+    path('reviewpage', views.reviewPageView.as_view(), name="reviewpage_view"),  
     path('user', views.userView.as_view(), name="user_view"),
     
      

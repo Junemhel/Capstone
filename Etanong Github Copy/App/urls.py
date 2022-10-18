@@ -17,6 +17,7 @@ urlpatterns = [
     path('trueorfalsequestion', views.trueorfalsequestionView.as_view(), name="trueorfalsequestion_view"),
     path('autogenerate', views.autoGenerateView.as_view(), name="autogenerate_view"),  
     path('reviewpage', views.reviewPageView.as_view(), name="reviewpage_view"),  
+    path('review', views.reviewView.as_view(), name="review_view"),  
     path('user', views.userView.as_view(), name="user_view"),
     
      

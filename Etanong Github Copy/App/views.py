@@ -43,7 +43,10 @@ class autoGenerateView(View):
 class reviewPageView(View):
     def get(self, request):
         return render(request, 'reviewpage.html',{})                                              
-             
+
+class reviewView(View):
+    def get(self, request):
+        return render(request, 'review.html',{})                   
 
 class createquiz2View(View):
     def get(self, request):

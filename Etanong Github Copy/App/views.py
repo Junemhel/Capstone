@@ -8,10 +8,18 @@ from django.http import HttpResponse
 from .models import *
 from .forms import *
 
-# Create your views here.
+# Create your views here. 
 class homeView(View):
     def get(self, request):
         return render(request, 'home.html',{})
+
+class teacherdashboardView(View):
+    def get(self, request):
+        return render(request, 'teacherdashboard.html',{})
+
+class studentdashboardView(View):
+    def get(self, request):
+        return render(request, 'studentdashboard.html',{})        
 
 class aboutView(View):
     def get(self, request):

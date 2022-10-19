@@ -12,14 +12,14 @@ urlpatterns = [
     path('register', views.registerView.as_view(), name="register_view"),   
     path('createquiz', views.createQuizView.as_view(), name="createQuiz_view"), 
     path('createclassadmin', views.createClassAdminView.as_view(), name="createClassadmin_view"), 
-     path('createclassteacher', views.createClassTeacherView.as_view(), name="createClassTeacher_view"), 
+    path('createclassteacher', views.createClassTeacherView.as_view(), name="createClassTeacher_view"), 
     path('createquiz2', views.createquiz2View.as_view(), name="createquiz2_view"),  
     path('trueorfalsequestion', views.trueorfalsequestionView.as_view(), name="trueorfalsequestion_view"),
     path('autogenerate', views.autoGenerateView.as_view(), name="autogenerate_view"),  
     path('reviewpage', views.reviewPageView.as_view(), name="reviewpage_view"),  
     path('user', views.userView.as_view(), name="user_view"),
-    
-     
+    path('teacherdashboard', views.teacherdashboardView.as_view(), name="teacherdashboard_view"),
+    path('studentdashboard', views.studentdashboardView.as_view(), name="studentdashboard_view"),
 ]    
    
 

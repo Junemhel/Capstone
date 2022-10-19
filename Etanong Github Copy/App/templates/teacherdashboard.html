@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>HOME / TEACHER DASHBOARD</h2>
+      </div>
+
+    </div>
+  </section>
+
+
+<div class="container">
+     <!-- TOP BOXES -->
+
+  <!-- TOP BOX 1 -->
+  <div id="topdashbox1">
+        <p class="titledashbox">AVERAGE SCORE OF STUDENTS</p>
+        <p class="innertopdashbox1">80%</p>
+	</div>
+
+  <!-- TOP BOX 2 -->
+    <div id="topdashbox2">
+        <p class="titledashbox">TOP 3 PERFORMING STUDENTS</p>
+
+		    <a href="#"class="innertopdashbox2" >
+		    	<p class="innernameshape">BELLE RABS</p>
+		    </a>
+		    <a href="#"class="innertopdashbox2">
+		    	<p class="innernameshape">BLAZE ROD BATS</p>
+		    </a>
+		    <a href="#"class="innertopdashbox2">
+		    	<p class="innernameshape">FATIMA LABS</p>
+		    </a> 
+	</div>
+
+  <!-- TOP BOX 3 -->
+  <div id="topdashbox3">
+         <p class="titledashbox">AVERAGE TIME TAKEN</p>
+         <p class="innertopdashbox3">10:33</p>
+    </div>
+
+
+    <!-- BOTTOM BOXES -->
+    
+
+    <div id="entertextbb">SEARCH QUIZ</div>
+
+	<div id="belowboxes">
+		    <!-- QUIZ BOX 1 -->
+	     <div id="subjectbox1">
+            <p class="titledashbox">QUIZ #1</p>
+            <p class="innersubjectbox1">MATH</p>
+            <p class="innersubjectscore">50 POINTS</p>
+	    </div>
+
+    	    <!-- QUIZ BOX 2 -->
+	    <div id="subjectbox2">
+            <p class="titledashbox">QUIZ #2</p>
+            <p class="innersubjectbox2">SCIENCE</p>
+            <p class="innersubjectscore">30 POINTS</p>
+	    </div>
+
+    	    <!-- QUIZ BOX 3 -->
+        <div id="subjectbox3">
+            <p class="titledashbox">QUIZ #3</p>
+            <p class="innersubjectbox3">HISTORY</p>
+            <p class="innersubjectscore">50 POINTS</p>
+        </div>
+
+	</div>
+
+</div>
+
+
+<style> 
+
+</style>
+
+{% endblock content %}

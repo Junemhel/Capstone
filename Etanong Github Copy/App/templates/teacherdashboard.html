@@ -2,62 +2,59 @@
 {% load static %}
 {% block content %}
 
-<<<<<<< HEAD
+
 <style>
 
 
 
-.searchcontainer {
-  position: relative;
-  --size-button: 30px;
-}
+  .searchcontainer {
+    position: relative;
+    --size-button: 30px;
+  }
+  
+  .inputbb {
+    padding-left: var(--size-button);
+    height: var(--size-button);
+    font-size: 15px;
+    border: none;
+    color: #f7c007;
+    outline: none;
+    width: var(--size-button);
+    transition: all ease 0.3s;
+    background-color: #f7c007;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+  .inputbb:focus,
+  .inputbb:not(:invalid) {
+    width: 200px;
+    cursor: text;
+  }
+  
+  .inputbb:focus + .searchicon,
+  .inputbb:not(:invalid) + .searchicon {
+    pointer-events: all;
+    cursor: pointer;
+  }
+  
+  .searchcontainer .searchicon {
+    position: absolute;
+    width: var(--size-button);
+    height: var(--size-button);
+    top: 0;
+    left: 0;
+    padding: 8px;
+    pointer-events: none;
+  }
+  
+  .searchcontainer .searchicon svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  </style>
 
-.inputbb {
-  padding-left: var(--size-button);
-  height: var(--size-button);
-  font-size: 15px;
-  border: none;
-  color: #f7c007;
-  outline: none;
-  width: var(--size-button);
-  transition: all ease 0.3s;
-  background-color: #f7c007;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.inputbb:focus,
-.inputbb:not(:invalid) {
-  width: 200px;
-  cursor: text;
-}
-
-.inputbb:focus + .searchicon,
-.inputbb:not(:invalid) + .searchicon {
-  pointer-events: all;
-  cursor: pointer;
-}
-
-.searchcontainer .searchicon {
-  position: absolute;
-  width: var(--size-button);
-  height: var(--size-button);
-  top: 0;
-  left: 0;
-  padding: 8px;
-  pointer-events: none;
-}
-
-.searchcontainer .searchicon svg {
-  width: 100%;
-  height: 100%;
-}
-
-</style>
-
-
-=======
->>>>>>> 391afb0232478f255f3b8671b5dae35563716756
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
@@ -70,18 +67,15 @@
         </div>
       </div>      
       </h2>
-<<<<<<< HEAD
 
     </section>
     <!-- End Breadcrumbs -->
 
 
 
-=======
 
     </section>
     <!-- End Breadcrumbs -->
->>>>>>> 391afb0232478f255f3b8671b5dae35563716756
 
 
 <div class="container">
@@ -148,7 +142,7 @@
   <!-- TOP BOX 3 -->
 
     <!-- BOTTOM BOXES -->
-    
+
 <!-- SEARCH BAR -->
     <div class="searchcontainer">
       <input placeholder="SEARCH QUIZ" required="" class="inputbb" name="text" type="text">

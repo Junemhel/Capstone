@@ -57,6 +57,10 @@ class reviewView(View):
     def get(self, request):
         return render(request, 'review.html',{})                   
 
+class reviewPageFlashcardView(View):
+    def get(self, request):
+        return render(request, 'reviewPageFlashcard.html', {})
+        
 class createquiz2View(View):
     def get(self, request):
         return render(request, 'createquiz2.html',{})   

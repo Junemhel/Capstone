@@ -26,7 +26,10 @@
   <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
   <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
-
+  <link rel="stylesheet" href="{% static 'assets/cssRP/normalize.css'%}" />
+  <link rel="stylesheet" href="{% static 'assets/cssRP/foundation.css'%}" />
+  <script src="{% static 'assets/jsRP/vendor/custom.modernizr.js'%}"></script>
+  <script src="{% static 'assets/jsRP/jquery-latest.min.js'%}"></script>
   <!-- Template Main CSS File -->
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
@@ -101,6 +104,9 @@
           <a href="{% url 'App:createQuiz_view' %}">Create Quiz</a>
           <a href="{% url 'App:createquiz2_view' %}">Create Quiz 2</a>
           <a href="{% url 'App:trueorfalsequestion_view' %}">True or False Prompt</a>
+          <a href="{% url 'App:createClassTeacher_view' %}">Create Class Teacher</a>
+          <a href="{% url 'App:createClassAdmin_view' %}">Create Class Admin</a>
+          <a href="{% url 'App:randompicker_view' %}">RandomPicker</a>
         
         </div>
       </div>

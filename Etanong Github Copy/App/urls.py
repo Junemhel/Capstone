@@ -11,7 +11,7 @@ urlpatterns = [
     path('login', auth_view.LoginView.as_view(template_name='login.html'),name="login_view"),
     path('register', views.registerView.as_view(), name="register_view"),   
     path('createquiz', views.createQuizView.as_view(), name="createQuiz_view"), 
-    path('createclassadmin', views.createClassAdminView.as_view(), name="createClassadmin_view"), 
+    path('createclassadmin', views.createClassAdminView.as_view(), name="createClassAdmin_view"), 
     path('createclassteacher', views.createClassTeacherView.as_view(), name="createClassTeacher_view"), 
     path('createquiz2', views.createquiz2View.as_view(), name="createquiz2_view"),  
     path('trueorfalsequestion', views.trueorfalsequestionView.as_view(), name="trueorfalsequestion_view"),
@@ -20,6 +20,7 @@ urlpatterns = [
     path('reviewPageFlashcard', views.reviewPageFlashcardView.as_view(), name="reviewpageflashcard_view"), 
     path('review', views.reviewView.as_view(), name="review_view"),  
     path('user', views.userView.as_view(), name="user_view"),
+    path('randompicker', views.randompickerView.as_view(), name="randompicker_view"),
     path('teacherdashboard', views.teacherdashboardView.as_view(), name="teacherdashboard_view"),
     path('studentdashboard', views.studentdashboardView.as_view(), name="studentdashboard_view"),
 ]    

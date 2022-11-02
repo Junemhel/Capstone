@@ -19,7 +19,8 @@ class teacherdashboardView(View):
 
 class studentdashboardView(View):
     def get(self, request):
-        return render(request, 'studentdashboard.html',{})        
+        return render(request, 'studentdashboard.html',{})
+                
 
 class aboutView(View):
     def get(self, request):
@@ -67,6 +68,9 @@ class createquiz2View(View):
 class trueorfalsequestionView(View):
     def get(self, request):
         return render(request, 'trueorfalsequestion.html',{})   
+class randompickerView(View):
+    def get(self, request):
+        return render(request, 'randompicker.html',{})        
 
 
 class registerView(View):

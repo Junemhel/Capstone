@@ -13,7 +13,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  background-color: #4d2f34;
+  background-color: #ebebeb;
 }
 
 a {
@@ -466,7 +466,7 @@ section {
 }
 
 .section-bg {
-  background-color: #4d2f34;
+  background-color: #ebebeb;
 }
 
 .section-title {
@@ -500,14 +500,14 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  background: #2c1a1d;
+  /* background: #2c1a1d; */
   min-height: 40px;
-  margin-top: 72px;
+  margin-top: 70px;
 }
 .breadcrumbs h2 {
   font-size: 26px;
   font-weight: 600;
-  color: #f7c007;
+  color: #781b1b;
 }
 .breadcrumbs ol {
   display: flex;
@@ -516,10 +516,10 @@ section {
   font-weight: 600;
   padding: 0;
   margin: 0;
-  color: #f7c007;
+  color: #781b1b;
 }
 .breadcrumbs ol a {
-  color: #f7c007;
+  color: #781b1b;
   font-weight: 600;
 }
 .breadcrumbs ol li + li {
@@ -529,7 +529,7 @@ section {
   display: inline-block;
   padding-right: 10px;
   font-weight: 600;
-  color: #f7c007;
+  color: #781b1b;
   content: "/";
 }
 @media (max-width: 991px) {

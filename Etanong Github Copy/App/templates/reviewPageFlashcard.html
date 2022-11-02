@@ -154,6 +154,44 @@ code {
   color: white;
   transform: rotateY(180deg);
 }
+
+
+input::placeholder {
+  color: #c7acaf;
+  font-size: 1.4em;
+  font-family: "Roboto", sans-serif;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #f7c007;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(233, 194, 22);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: rgb(187, 62, 62);}
+
+.show {display: block;}
+
 </style>  
 
 <div id="demo1" class="carousel slide" data-interval="false" style="border:thick solid #f8c400"> 

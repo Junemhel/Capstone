@@ -157,7 +157,7 @@ function go(){
   if(document.all) { // IE
     names=names.split("\n");
   }
-  else { //Mozilla
+  else { 
     names=names.split("\n");
   }
   $("#values").show();
@@ -167,19 +167,17 @@ function go(){
   $("div").remove(".extra");
   $("#playback").html("");
   newtop = (names.length * 200 * -1 ) + 200;
-  //$('#values').css({top: -300});
+ 
   $('#values').css({top: + newtop, "z-index": 1});	
   names.sort( randOrd );
-  var fruits = new Array ( "apple", "pear", "orange", "banana" );
-  //console.log(fruits);
-  //console.log(names);
-  //alert(newtop);
+  
+  
   for(var i in names){
     if (names[i] == "" || typeof(names[i]) == undefined){
       count = count-1;
     } else {
       name = names[i];
-      //console.log(name);
+     
       $('#values').append('<div id=result'+count+' class=name>'+name+'</div>');
     }
     count = count+1;

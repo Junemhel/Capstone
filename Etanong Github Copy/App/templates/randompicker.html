@@ -80,50 +80,15 @@ body { background:#F1C40F url(img/bg-noise-orange.png); }
 var text;
 var names = new Array();
 
-function reset(){
-  // re-enable go button
-  setTimeout("$('#go').removeAttr('disabled')",11005);
-  var namesbreak = "";
-  if(gup('names') != ""){
-    var names = gup('names');
-    namesbreak = names.replace(/101/g,'\n');
-    namesbreak = namesbreak.replace(/%20/g,' ');          
-    }
-    else   {
-      var names = new Array();
-    for(var i in names){
-      name = names[i];
-      if (name == "" || typeof(name) == undefined){}else{
-         namesbreak = namesbreak + name + "\n";
-      }
-    }
-  }
-  $("#namesbox").val(namesbreak);
-}
-
-function gup(para)
-{
-  para = para.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-  var regexS = "[\\?&]"+para+"=([^&#]*)";
-  var regex = new RegExp( regexS );
-  var results = regex.exec( window.location.href );
-  if( results == null )
-    return "";
-  else
-    return results[1];
-}
-
 function randOrd(){
 	return (Math.round(Math.random())-0.5); 
 }
 
 function save(){
-        $("#varnote").hide();
+        
         $("#popdown").show();
         $("#values").hide();
         $("div").remove("#result1");
-        savenames = $("#namesbox").val();
-        savenames = savenames.replace(/\n\r?/g, '101');
         $('#headline').fadeOut();
         $('#headline').text('The name list is saved and updated.').fadeIn();
         $("#names").show();
@@ -131,7 +96,7 @@ function save(){
 }
 
 function namelist(){
-        $("#varnote").hide(); 
+      
         $('#namesbox').removeAttr('disabled','disabled');
         $('#headline').text('Configure name list');
         $("#popdown").show();
@@ -142,8 +107,8 @@ function namelist(){
 
 // does the actual animation
 function go(){
-  $("#varnote").hide();
-  $('body').css({"overflow-y": "hidden"});
+ 
+  $('body').css({"overflow-y": "visible"});
   $('#go').attr('disabled','disabled');
   $('#list').attr('disabled','disabled');
   $('#save').attr('disabled','disabled');
@@ -224,15 +189,16 @@ function removevictim(){
 	var nameupdated = "";
 	for(var i in names){
 		name = names[i];
-                if (name == "" || name == text || typeof(name) == undefined){}else{
-			nameupdated = nameupdated + "\n" + name;
+                if (name == "" || name == text || typeof(name) == undefined){}
+                else{
+			              nameupdated = nameupdated + "\n" + name;
 		}
 	}
-	$('#namesbox').val("");
+	
   $('#namesbox').val(nameupdated);
   $('#result1').html("Removed");
-  $('#result1').fadeOut(1000, function(){
-    $("div").remove("#result1");
+  $('#result1').fadeOut(1000, function(){ 
+  $("div").remove("#result1");
   });
   $("div").remove(".name");
   $("div").remove(".extra");

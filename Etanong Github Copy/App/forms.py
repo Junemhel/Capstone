@@ -7,6 +7,7 @@ from App.models import (Answer, Question, Student, StudentAnswer,
                               Subject, User)
 
 
+
 class TeacherSignUpForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User

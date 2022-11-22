@@ -24,6 +24,8 @@ from .forms import BaseAnswerInlineFormSet, QuestionForm, TeacherSignUpForm
 from .models import Answer, Question, Quiz, User
 
 
+from django.core.mail import send_mail 
+from django.conf import settings
 # Create your views here. 
 class homeView(View):
     def get(self, request):
@@ -45,6 +47,25 @@ class aboutView(View):
 class contactView(View):
     def get(self, request):
         return render(request, 'contact.html',{})
+
+    def post(self,request):
+        if request.method == "POST":
+            
+            email = request.POST['email']
+            subject = request.POST['subject']
+            
+            message_header = "From: " + email + '\n'
+            message_body_default = "This is an automated message feedback from the site.\n"
+            message_body_email = "Message: " + request.POST['message'] 
+            message = message_header + message_body_default + message_body_email   
+            send_mail(
+                subject,
+                message,
+                settings.EMAIL_HOST_USER,
+                ['contactusetangong@gmail.com'],
+                fail_silently=False,)
+            return render(request, 'contact.html',{})
+      
 
 class loginView(View):
     def get(self, request):

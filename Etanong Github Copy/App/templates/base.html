@@ -214,8 +214,11 @@
     }
   }
 </script>
-   
-
+<script>
+   $("#contact-form").on('submit',()=>{
+     $("#contact-feedback-msg").removeClass("hide");
+   })
+</script>
 </body>
 
 </html>

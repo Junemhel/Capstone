@@ -59,7 +59,7 @@
   
         <div class="row mt-5 justify-content-center" data-aos="fade-up">
           <div class="col-lg-10">
-            <form method="POST" action = "{% url 'App:contact_view'%}">
+            <form method="POST" id="contact-form" action = "{% url 'App:contact_view'%}">
             {% csrf_token %}
               <div class="row">
                 <!-- <div class="col-md-6 form-group">
@@ -75,11 +75,10 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <!-- <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
+              <div id="contact-feedback-msg" class="my-3 hide">
+
                 <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div> -->
+              </div>
               
               
               <div class="text-center"><button type="submit">Send Message</button></div>

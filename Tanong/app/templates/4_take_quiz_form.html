@@ -1,0 +1,33 @@
+{% extends '0_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="row mt-5 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10 signup-form center-text">
+
+          <div class="progress mb-3">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress }}%"></div>
+          </div>
+          <h2 class="mb-3">{{ quiz.name }}</h2>
+          <p class="lead">{{ question.text }}</p>
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <br>
+            <div style="margin-left: 80%;">
+              <button type="submit" class="btn btn-primary">Next →</button>
+            </div>
+          </form>       
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  
+{% endblock %}

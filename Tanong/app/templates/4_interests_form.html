@@ -1,0 +1,33 @@
+{% extends '0_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="row mt-5 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10 signup-form">
+        
+          <h2 class="mb-3 center-text">Update your interests</h2>
+          <br>
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <br>
+            <br>
+            <div class="center-text">
+              <button type="submit" class="btn btn-success">Save changes</button>
+              <a href="{% url 'app:quiz_list' %}" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+
+          </form>
+                
+        </div>
+      </div>
+    </div>
+  </section>  
+
+{% endblock %}

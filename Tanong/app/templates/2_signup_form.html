@@ -1,0 +1,32 @@
+{% extends '0_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <section id="contact" class="contact">
+      <div class="container">
+  
+        <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-10">
+          
+
+                  
+                  <form method="post" novalidate style="color:black;" class="php-email-form">
+                    
+                      <h2 style="text-align:center;">Sign up as a {{ user_type }}</h2>
+                    
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}">
+                    {{ form|crispy }}
+                    <br>
+                    <button type="submit" class="btn btn-success vertical-center">Sign up</button>
+                  </form>
+
+          </div>
+  
+        </div>
+  
+      </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends '0_base.html' %}
+
+{% block content %}
+
+  <br><br><br><br>
+
+<div class="container my-4 quiz-list">
+  <div class="row justify-content-center">
+    <div class="col-md-15">
+    
+      {% include '4_header.html' with active='taken' %}
+
+      <div class="card mb-3">
+        <table class="sampleCard">
+          <thead>
+            <tr>
+              <th>Quiz</th>
+              <th>Subject</th>
+              <th>Score</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for taken_quiz in taken_quizzes %}
+              <tr>
+                <td>{{ taken_quiz.quiz.name }}</td>
+                <td>{{ taken_quiz.quiz.subject.get_html_badge }}</td>
+                <td>{{ taken_quiz.score }}</td>
+                <td>
+                  <a href="" class="btn btn-primary">Review Quiz</a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td class="bg-light text-center font-italic" colspan="3">You haven't completed any quiz yet.</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends '0_base.html' %}
+
+{% block content %}
+
+<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="row mt-5 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10 signup-form center-text">
+        
+            <h2>Sign up for a free account</h2>
+            <p class="lead" style="color: black;">Select below the type of account you want to create</p>
+            <a href="{% url 'app:student_signup' %}" class="btn-secondary btn-lg" role="button">I'm a student</a>
+            <a href="{% url 'app:teacher_signup' %}" class="btn-primary  btn-lg" role="button">I'm a teacher</a>
+                
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends '0_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+  <div class="container my-4 quiz-list">
+    <div class="row justify-content-center">
+      <div class="col-md-15">
+  
+        <div class="">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'app:quiz_change_list' %}">My Quizzes</a></li>
+              <li class="breadcrumb-item"><a href="{% url 'app:quiz_change' quiz.pk %}">{{ quiz.name }}</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Confirm deletion</li>
+            </ol>
+          </nav>
+          <h2>Confirm deletion</h2>
+          <p class="lead">Are you sure you want to delete the quiz <strong>"{{ quiz.name }}"</strong>? There is no going back.</p>
+          <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-lg">Yes, I'm sure</button>
+            <a href="{% url 'app:quiz_change' quiz.pk %}" class="btn btn-outline-secondary btn-lg" role="button">Cancel</a>
+          </form>
+
+
+        </div>
+  
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends '0_base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <div class="container my-4 quiz-list">
+    <div class="row justify-content-center">
+      <div class="col-md-15">
+  
+        <div class="">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'app:quiz_change_list' %}">My Quizzes</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add a new quiz</li>
+            </ol>
+          </nav>
+          <h2>Add a new quiz</h2>
+          <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <br><br>
+            <button type="submit" class="btn btn-success">Save</button>
+            <a href="{% url 'app:quiz_change_list' %}" class="btn btn-outline-secondary" role="button">Cancel</a>
+          </form>
+
+          
+
+        </div>
+  
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

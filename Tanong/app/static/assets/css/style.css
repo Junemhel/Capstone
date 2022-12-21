@@ -13,7 +13,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: black;
-  background-color: #ebebeb;
+  background-color: #ebebeb !important;
 }
 
 a {

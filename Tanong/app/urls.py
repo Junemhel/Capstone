@@ -25,7 +25,10 @@ urlpatterns = [
     path('accounts/profile/', views.QuizListView.as_view(), name='quiz_list'),
     path('accounts/interests/', views.StudentInterestsView.as_view(), name='student_interests'),
     path('accounts/taken/', views.TakenQuizListView.as_view(), name='taken_quiz_list'),
-    path('accounts/quiz/<int:pk>/', views.take_quiz, name='take_quiz'),    
+    path('accounts/quiz/<int:pk>/', views.take_quiz, name='take_quiz'),
+
+    path('accounts/review', views.ReviewView.as_view(), name="review"), #==================================REVIEW WORK=====================================#
+    path('accounts/review/<int:pk>/', views.review_quiz, name="review_quiz"),     #==================================REVIEW WORK=====================================#
     
     path('accounts/', include('django.contrib.auth.urls'), name="login"),
     path('accounts/loggedout', views.logout_user, name="logout"),

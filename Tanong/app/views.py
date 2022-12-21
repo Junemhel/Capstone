@@ -14,9 +14,9 @@ from django.urls import reverse_lazy, reverse
 from django.utils.decorators import method_decorator
 from django.views.generic import CreateView, ListView, UpdateView
 
-from django.db.models import Avg, Count
+from django.db.models import Avg, Count, Q
 from django.forms import inlineformset_factory
-
+from itertools import chain
 
 from .decorators import teacher_required, student_required
 from .forms import BaseAnswerInlineFormSet, QuestionForm, TeacherSignUpForm, StudentInterestsForm, StudentSignUpForm, TakeQuizForm
@@ -428,4 +428,45 @@ def login_user(request, user):
     login(request, user)
     
     return redirect('app:home_view')
+
+#######################################################################################################################################
+# Reviews                                                                                                                             # 
+####################################################################################################################################### 
+
+
+class ReviewView(View):
+    def get(self, request):      
+        return render(request, '5_review.html', {})
+
+#  return Question.objects.filter(quiz__owner=self.request.user)
+@login_required
+@student_required
+def review_quiz(request, pk):   #==================================REVIEW WORK=====================================#
+    quiz = get_object_or_404(Quiz, pk=pk) #==================================REVIEW WORK=====================================#
+    # student = request.user.student #==================================REVIEW WORK=====================================#
+    # total_questions = quiz.questions.count() #==================================REVIEW WORK=====================================#
+    # unanswered_questions = student.get_unanswered_questions(quiz) #==================================REVIEW WORK=====================================#
+    # total_unanswered_questions = unanswered_questions.count() #==================================REVIEW WORK=====================================#
+    # progress = 100 - round(((total_unanswered_questions - 1) / total_questions) * 100) #==================================REVIEW WORK=====================================#
+    # question = unanswered_questions.first() #==================================REVIEW WORK=====================================#
+   
+
+    # question = get_object_or_404(Question, quiz=pk)
+
+    # answer = get_object_or_404(Answer, Q(question=question.pk & is_correct=1))
+    # question = Question.objects.filter(
+    #     Q(quiz=pk)
+    # )
+    # answer = Answer.objects.filter(
+    #     Q(question=question) & Q(is_correct=1)
+    # )
+    # flashcards = list(chain(question, answer))
+
+    data = Answer.objects.filter(is_correct = 1)
+
+
+    return render(request, '5_review.html', { 
+        'data' : data,
+        'quiz' : quiz
+    })
 

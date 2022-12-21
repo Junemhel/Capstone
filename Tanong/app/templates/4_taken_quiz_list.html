@@ -27,7 +27,7 @@
                 <td>{{ taken_quiz.quiz.subject.get_html_badge }}</td>
                 <td>{{ taken_quiz.score }}</td>
                 <td>
-                  <a href="" class="btn btn-primary">Review Quiz</a>
+                  <a href="{% url 'app:review_quiz' taken_quiz.quiz.pk %}" class="btn btn-primary">Review Quiz</a>
                 </td>
               </tr>
             {% empty %}
